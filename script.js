@@ -40,12 +40,12 @@ const observer = new IntersectionObserver(entries => {
     if (entry.isIntersecting) {
       resetCards();
 
-      // tiny delay ensures SAME behavior every time
+      
       setTimeout(() => {
         revealCards();
       }, 150);
     } else {
-      // fully reset when leaving
+    
       isPlaying = false;
       resetCards();
     }
@@ -57,6 +57,5 @@ const observer = new IntersectionObserver(entries => {
 
 observer.observe(section);
 
-// initial state
 resetCards();
 

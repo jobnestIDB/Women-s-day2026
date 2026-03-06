@@ -71,3 +71,71 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+const eventStart = new Date("March 28, 2026 09:00:00").getTime();
+const eventEnd = new Date("March 29, 2026 18:00:00").getTime();
+
+const countdown = setInterval(function () {
+
+  const now = new Date().getTime();
+
+  // BEFORE EVENT
+  if (now < eventStart) {
+
+    const distance = eventStart - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+  }
+
+  // DURING EVENT
+  else if (now >= eventStart && now <= eventEnd) {
+
+    clearInterval(countdown);
+
+    document.querySelector(".countdown").innerHTML =
+      "<h3>The Celebration Has Begun!</h3><p>Join Us on 28th and 29 March</p>";
+  }
+
+  // AFTER EVENT
+  else {
+
+    clearInterval(countdown);
+
+    document.querySelector(".countdown").innerHTML =
+      "<h3>Thank You for Being Part of Women's Day 2026</h3><p>See You Next Year</p>";
+  }
+
+}, 1000);
+
+//FAQ
+// FAQ Accordion
+
+const faqQuestions = document.querySelectorAll(".faq-question");
+
+faqQuestions.forEach(question => {
+
+question.addEventListener("click", () => {
+
+const faqItem = question.parentElement;
+const answer = faqItem.querySelector(".faq-answer");
+
+faqItem.classList.toggle("active");
+
+if(answer.style.maxHeight){
+answer.style.maxHeight = null;
+}
+else{
+answer.style.maxHeight = answer.scrollHeight + "px";
+}
+
+});
+
+});

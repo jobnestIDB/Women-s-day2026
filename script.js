@@ -116,7 +116,7 @@ const countdown = setInterval(function () {
 }, 1000);
 
 //FAQ
-// FAQ Accordion
+
 
 const faqQuestions = document.querySelectorAll(".faq-question");
 

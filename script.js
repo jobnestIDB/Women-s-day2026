@@ -139,3 +139,17 @@ answer.style.maxHeight = answer.scrollHeight + "px";
 });
 
 });
+
+document.querySelector(".register-btn").addEventListener("click",()=>{
+for(let i=0;i<30;i++){
+let conf=document.createElement("span");
+conf.className="confetti";
+conf.style.left=Math.random()*100+"%";
+document.body.appendChild(conf);
+
+setTimeout(()=>conf.remove(),2000);
+}
+});
+
+
+

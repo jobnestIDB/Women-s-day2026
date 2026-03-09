@@ -14,7 +14,7 @@ body {
   padding-top: 80px;
   overflow-x: hidden;
   
-  background: linear-gradient(to bottom, #ff4b8b 0%, #ff6fa8 35%, #ff9fc3 65%, #ffd6e6 100%),
+  background: linear-gradient(to bottom,  #ff6fa8 35%, #ff9fc3 65%, #ffd6e6 100%),
   url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
 }
 
@@ -1129,6 +1129,15 @@ a {
   .gallery-grid {
     grid-template-columns: repeat(1, 1fr);
   }
+  .brand-nav .nav-btn {
+  position: relative;
+  color: white;
+  padding: 12px 22px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
 }
 
 .reveal {
@@ -1155,6 +1164,7 @@ a {
   margin-bottom: 50px;
   text-align: center;
 }
+
  .countdown{
   display:flex;
   justify-content:center;
@@ -1544,5 +1554,23 @@ transition:.3s;
 opacity:1;
 transform:scale(1.05);
 }
+
+.confetti{
+position:fixed;
+top:0;
+width:8px;
+height:8px;
+background:#ff2f7d;
+animation:fall 2s linear;
+}
+
+@keyframes fall{
+to{
+transform:translateY(100vh) rotate(360deg);
+opacity:0;
+}
+}
+
+
 
 

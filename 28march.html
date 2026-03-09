@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Women’s Day Event Schedule</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #ff96bc, #ffd6e6);
+            padding: 80px 20px;
+        }
+
+        /* BACK BUTTON */
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: white;
+            color: #e91e63;
+            padding: 10px 18px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: .3s;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* HEADER */
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 40px;
+            color: #c2185b;
+        }
+
+        .header span {
+            color: #555;
+            font-size: 18px;
+        }
+
+        /* INTRO */
+
+        .intro {
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        /* SECTION TITLE */
+
+        .section-title {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            font-size: 28px;
+            color: #c2185b;
+            font-weight: 600;
+        }
+
+        /* GRID */
+
+        .activities {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        /* CARD */
+
+        .activity-card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transition: .3s;
+            position: relative;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-8px);
+        }
+
+        /* TIME */
+
+        .time {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #e91e63;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* TITLE */
+
+        .activity-card h3 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* TEXT */
+
+        .activity-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* TAG */
+
+        .tag {
+            margin-top: 12px;
+            display: inline-block;
+            background: #ffe3ef;
+            color: #c2185b;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        /* REGISTER */
+
+        .register-section {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .register-btn {
+            display: inline-block;
+            padding: 14px 36px;
+            background: #e91e63;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .register-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* MOBILE */
+
+        @media(max-width:768px) {
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .activities {
+                grid-template-columns: 1fr;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="Womens-day-2026.html" class="back-btn">← Back</a>
+
+    <div class="header">
+        <h1>Women’s Day Celebration</h1>
+        <span>28 March 2026 • Bangalore</span>
+    </div>
+
+    <div class="intro">
+        The first day of the Women’s Day celebration features a mix of engaging
+        stage programs and interactive stalls. Visitors can enjoy inspiring
+        sessions, performances, networking opportunities, and explore various
+        stalls offering creative products, opportunities, and experiences.
+    </div>
+
+
+    <!-- STAGE ACTIVITIES -->
+
+    <div class="section-title">Stage Activities</div>
+
+    <div class="activities">
+
+        <div class="activity-card">
+
+            <div class="time">9:30 AM</div>
+
+            <h3>Opening Ceremony</h3>
+
+            <p>
+                Kickstarting the celebration with welcoming remarks and
+                an introduction to the event highlights.
+            </p>
+
+        </div>
+
+
+
+        <div class="activity-card">
+
+            <div class="time">11:30 AM</div>
+
+            <h3>Inspiring Talks</h3>
+
+            <p>
+                Guest speakers share insights on leadership,
+                entrepreneurship, and personal growth.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- STALL ACTIVITIES -->
+
+    <div class="section-title">Off-Stage Activities</div>
+
+    <div class="activities">
+        <div class="activity-card">
+
+            <div class="time">10:00 AM</div>
+
+            <h3>Women’s Walkathon</h3>
+
+            <p>
+                Participants walk together promoting health awareness,
+                unity, and empowerment.
+            </p>
+
+            <span class="tag">Registration Required</span>
+
+        </div>
+        <div class="activity-card">
+
+            <div class="time">All Day</div>
+
+            <h3>Business & Startup Stalls</h3>
+
+            <p>
+                Explore products and services presented by women-led
+                businesses and entrepreneurs.
+            </p>
+            <span class="tag">Registration Required</span>
+        </div>
+
+
+        <div class="activity-card">
+
+            <div class="time">All Day</div>
+
+            <h3>Creative & Art Stalls</h3>
+
+            <p>
+                Display of paintings, crafts, and creative works
+                by talented artists.
+            </p>
+            <span class="tag">Registration Required</span>
+        </div>
+
+
+        <div class="activity-card">
+
+            <div class="time">All Day</div>
+
+            <h3>Food & Experience Stalls</h3>
+
+            <p>
+                Visitors can explore unique food stalls and
+                interactive experiences throughout the day.
+            </p>
+            <span class="tag">Registration Required</span>
+        </div>
+
+    </div>
+
+
+    <div class="register-section">
+
+        <a href="" class="register-btn">
+            Register Now
+        </a>
+
+    </div>
+
+</body>
+
+</html>

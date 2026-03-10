@@ -908,14 +908,22 @@ a {
 }
 
 /* Logo style */
-.partner-item img {
-  height: 75px;
-  width: auto;
-  max-width: 150px;
-  object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.75;
-  transition: 0.3s ease;
+.partner-item img{
+  height:75px;
+  width:auto;
+  max-width:150px;
+  object-fit:contain;
+
+  filter:grayscale(80%);
+  opacity:0.85;
+
+  transition:.3s ease;
+}
+
+.partner-item:hover img{
+  filter:grayscale(0%);
+  opacity:1;
+  transform:scale(1.05);
 }
 
 .partner-item:hover img {
@@ -931,6 +939,18 @@ a {
   color: #6b2140;
   font-weight: 500;
   letter-spacing: 0.5px;
+}
+.gifting-logos{
+display:flex;
+justify-content:center;
+align-items:center;
+gap: 1px;
+margin-bottom:10px;
+}
+
+.gifting-logos img{
+height:70px;
+width:auto;
 }
 
 @media(max-width:768px) {

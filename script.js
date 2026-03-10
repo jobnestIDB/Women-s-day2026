@@ -140,7 +140,10 @@ answer.style.maxHeight = answer.scrollHeight + "px";
 
 });
 
-document.querySelector(".register-btn").addEventListener("click",()=>{
+const registerBtn = document.querySelector(".register-btn");
+
+if(registerBtn){
+registerBtn.addEventListener("click",()=>{
 for(let i=0;i<30;i++){
 let conf=document.createElement("span");
 conf.className="confetti";
@@ -150,6 +153,47 @@ document.body.appendChild(conf);
 setTimeout(()=>conf.remove(),2000);
 }
 });
+}
 
+// LIGHTBOX
 
+// LIGHTBOX
 
+const galleryImages = document.querySelectorAll(".gallery-grid img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const lightboxClose = document.getElementById("lightboxClose");
+const nextBtn = document.getElementById("next");
+const prevBtn = document.getElementById("prev");
+
+let currentIndex = 0;
+
+galleryImages.forEach((img,index)=>{
+  img.addEventListener("click",()=>{
+    currentIndex = index;
+    lightbox.style.display="flex";
+    lightboxImg.src = img.src;
+  });
+});
+
+lightboxClose.addEventListener("click",()=>{
+  lightbox.style.display="none";
+});
+
+nextBtn.addEventListener("click",(e)=>{
+  e.stopPropagation();
+  currentIndex = (currentIndex + 1) % galleryImages.length;
+  lightboxImg.src = galleryImages[currentIndex].src;
+});
+
+prevBtn.addEventListener("click",(e)=>{
+  e.stopPropagation();
+  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  lightboxImg.src = galleryImages[currentIndex].src;
+});
+
+lightbox.addEventListener("click",(e)=>{
+  if(e.target !== lightboxImg){
+    lightbox.style.display="none";
+  }
+});

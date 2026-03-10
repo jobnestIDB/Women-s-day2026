@@ -197,3 +197,23 @@ lightbox.addEventListener("click",(e)=>{
     lightbox.style.display="none";
   }
 });
+
+
+/* HAMBURGER MENU */
+
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+/* open / close menu */
+
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active");
+});
+
+/* close menu when nav item clicked */
+
+document.querySelectorAll(".brand-nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+  });
+});

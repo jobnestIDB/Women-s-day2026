@@ -217,3 +217,24 @@ document.querySelectorAll(".brand-nav a").forEach(link => {
     mobileMenu.classList.remove("active");
   });
 });
+
+// Smooth scroll without showing # in URL
+document.querySelectorAll(".scroll-link").forEach(link => {
+
+  link.addEventListener("click", function(e) {
+
+    e.preventDefault();
+
+    const targetId = this.getAttribute("data-target");
+    const targetSection = document.getElementById(targetId);
+
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+
+  });
+
+});
